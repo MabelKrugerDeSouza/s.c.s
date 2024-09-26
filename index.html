@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/imgs/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/imgs/favicon/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <title>S.C.S - Solidariedade com sabor</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between px-5" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contato</a>
+              </li>
+              <li class="nav-item">
+                <button class="btn botao__doacao text-black fw-bold rounded-0" >Quero doar</button>
+              </li>
+            </ul>
+      
+            <a class="navbar-brand mx-auto" href="index.html"> <img src="./assets/imgs/logos/logo cut.png" alt="logo da solidariedade com sabor" class="logoscs"> </a>
+            <div class="d-flex gap-5">
+                <a class="nav-link icon__nav" href="#"> <img src="./assets/imgs/icons/user_icon.svg" alt="área do usúario"> </a>
+                <a class="nav-link icon__nav" href="#"> <img src="./assets/imgs/icons/icon_shop.svg" alt="área do usúario"> </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+      <!-- banner das mãos pegando verduras -->
+      <section class="banner mb-5">
+        <div class="content__banner">
+        <p class="texto__banner text-white fw-bold p-5 pb-0 text-uppercase">Conectando alimentos, fortalecendo comunidades e combatendo a fome.</p>
+        <p class="texto2 p-5 pt-2 text-white">Conectando diretamente doadores, como restaurantes e supermercados, a beneficiários, como famílias de baixa renda e ONGs.</p>
+        <button class="btn ms-5 joinus text-black fw-bold fs-2 rounded-0 text-uppercase">Junte-se a nós</button>
+        </div>
+      </section>
+
+      <!-- números e dados -->
+       <section class="numeros d-flex flex-column">
+        <div class="dados_container d-flex text-white justify-content-center align-items-center text-center fs-2 text-uppercase"> 
+            <div class="dados p-5">
+                <h2 class="titulo_dados fw-bold">12.58 milhões</h2>
+                <p class="texto_dados">toneladas de alimentos são desperdiçados por ano no brasil</p>
+            </div>
+
+            <div class="dados p-5">
+                <h2 class="titulo_dados fw-bold">125.2 milhões</h2>
+                <p class="texto_dados">de brasileiros estão em situação de insegurança alimentar</p>
+            </div>
+
+            <div class="dados p-5">
+                <h2 class="titulo_dados fw-bold">60kg</h2>
+                <p class="texto_dados">de comida são desperdiçadas por cada brasileiro por ano</p>
+            </div>
+        </div>
+        <p class="text-center text-white">* Dados do relatório FAO de 2021 e Rede Brasileira de Pesquisa em Soberania e Segurança Alimentar e Nutricional (Rede PENSSAN)</p>
+       </section>
+      
+
+       <!-- conheça nossos produtos -->
+       <section class="mt-5">
+
+        <h3 class="conheca text-black text-center text-uppercase">Conheça nossos produtos:</h3>
+        
+        <div class="produtos d-flex justify-content-center gap-5 mt-4">
+            <div class="cestas">
+                <a class="link__cestas text-white text-uppercase fw-bold align-items-end mx-auto d-flex" href="cestas.html">
+                    <span class="cesta fs-1 mx-auto"><i>Cestas</i></span>
+                </a>
+            </div>
+
+            <div class="Campanhas">
+                <button class="link__campanhas text-white text-uppercase fw-bold align-items-end mx-auto d-flex" href="#">
+                    <span class="campanha fs-1 mx-auto"><i>Campanhas</i></span>
+                </button>
+            </div>
+        </div>
+       </section>
+
+       <!-- cestas -->
+
+       <section class="cestas_basicas">
+        
+        <div class="info__cestas d-flex align-items-center justify-content-between mx-5">
+          <div>
+          <h2 class="titulo__cestas fw-bold fs-1">Cestas:</h2>
+          </div>
+          <div>
+            <p class="fs-5 texto__cestas">• Oferecemos cestas com alimentos sazonais e da agricultura familiar, produzidos de forma agroecológica. </p>
+            <p class="fs-5 texto__cestas">• Elas conectam doadores a beneficiários, garantindo alimentos nutritivos a quem precisa e reduzindo desperdícios.</p>
+          </div>
+        </div>
+
+        <!-- descrição do pedido das cestas -->
+        <div class="descricao_cesta d-flex mt-5 align-items-center justify-content-center">
+
+            <div class="card1">
+              <img src="./assets/imgs/itens/card1.png" alt="Escolha o tamanho da cesta">
+              <p class="text-center">Escolha o tamanho da cesta</p>
+          </div>
+
+          <div class="card2">
+            <img src="./assets/imgs/itens/card2.png" alt="Podendo ou não adicionar mais produtos">
+            <p class="text-center">Podendo ou não adicionar mais produtos</p>
+          </div>
+
+          <div class="card3 mt-5">
+            <img src="./assets/imgs/itens/card3.png" alt="Os beneficiários vão receber a cesta semanalmente">
+            <p class="text-center">Os beneficiários vão receber a cesta semanalmente</p>
+        </div>
+
+      </div>
+       </section>
+
+
+       <!-- nossos agricultores -->
+       <section class="nossosagricultores">
+        <div class="text-white fw-bold p-5 ms-5">
+          <h2 class="texto__banner texto__agricultores">Nossos</h2>
+          <h2 class="texto__banner texto__agricultores">Agricultores</h2>
+        </div>
+
+        <p class="texto2__agricultores text-white px-5 ms-5 fs-4">Temos orgulho de trabalhar com mais de 300 agricultores em todo o Brasil. Sua contribuição é vital para promover práticas agrícolas sustentáveis e fortalecer a segurança alimentar em nossa comunidade. Juntos, estamos fazendo uma grande diferença!</p>
+
+       </section>
+
+       <!-- footer -->
+       <footer class="mt-5">
+        <p class="text-white text-center p-2 fw-bold">Liberdade Doutora Deolane</p>
+       </footer>
+      
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

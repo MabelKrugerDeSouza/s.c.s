@@ -1,0 +1,257 @@
+/* página inicial | cestas | campanhas | outros */
+
+:root{
+    --fonteprincipal: "Familjen Grotesk", sans-serif;
+    --fontesecundaria: "Anaheim", sans-serif;
+    --laranja: #E85C0D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar{
+    background-color: var(--laranja);
+    margin-bottom: 5em;
+    font-family: var(--fonteprincipal);
+}
+
+.logoscs{
+    width: 2.5em;
+}
+
+.botao__doacao{
+    background-color: #FCC4A5; 
+}
+
+.botao__doacao:hover{
+    background-color: #FCC4A5;
+    border: 1px solid black;
+    transition: 0.3s;
+}
+
+.banner{
+    background-image: url(../imgs/backgrounds/banner\ verduras.jpeg);
+    height: 37rem;
+    background-repeat: no-repeat;
+    font-family: var(--fonteprincipal);
+}
+
+
+.texto__banner{
+    font-size: 60px;
+    font-style: italic;
+    text-wrap: wrap;
+    width: 75rem;
+}
+
+.texto2{
+    font-size: 24px;
+    text-wrap: wrap;
+    width: 65rem;
+}
+
+.joinus{
+    background-color: #ACBD7C;
+    width: 301px;
+    height: 78px;
+}
+
+
+.joinus:hover{
+    padding-bottom: 20px;
+    transition: 0.3s;
+    background-color: #ACBD7C;
+}
+
+.numeros{
+    background-color: var(--laranja);
+    height: 291px;
+    font-family: var(--fontesecundaria);
+}
+
+.conheca {
+    font-family: var(--fonteprincipal);
+}
+
+.link__cestas{
+    width: 709px;
+    height: 325px;
+    background-image: url(../imgs/itens/cestas_de_verduras.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--fonteprincipal);
+    text-decoration: none;
+}
+
+.link__campanhas{
+    width: 709px;
+    height: 325px;
+    background-image: url(../imgs/itens/campanhas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--fonteprincipal);
+}
+
+.link__cestas:hover , .link__campanhas:hover{
+    border: 3px solid var(--laranja);
+    transition: 0.1s;
+}
+
+.cestas__basicas{
+    font-family: var(--fontesecundaria);
+}
+
+.info__cestas{
+    margin-top: 10em;
+}
+
+
+.nossosagricultores{
+    background-image: url(../imgs/backgrounds/casal-agricultores.png);
+    background-repeat: repeat-x;
+    height: 39.5em;
+    background-position: center;
+    margin-top: 8em;
+}
+
+.texto__agricultores{
+    text-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.texto2__agricultores{
+    text-wrap: wrap;
+    font-family: var(--fontesecundaria);
+    width: 50em ;
+}
+
+footer{
+    background-color: var(--laranja);
+    font-family: var(--fonteprincipal);
+   height: 3em;
+}
+
+
+/* telas de celular */
+@media (min-width: 390px) and (max-width: 757px){
+
+.banner{
+    background-image: url(../imgs/backgrounds/banner\ verduras.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: var(--fonteprincipal);
+}
+
+.content__banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto__banner{
+    font-size: 30px;
+    font-style: italic;
+    text-wrap: wrap;
+    width: 400px;
+}
+
+.texto2{
+    font-size: 20px;
+    text-wrap: wrap;
+    width: 25rem;
+}
+
+
+.joinus{
+    width: 10em;
+}
+
+.numeros{
+    height: 100%;
+}
+
+.dados_container{
+    flex-direction: column;
+}
+
+.produtos{
+    flex-direction: column;
+}
+
+.link__cestas{
+    width: 350px;
+}
+
+.link__campanhas{
+    width: 350px;
+}
+
+.info__cestas{
+    flex-direction: column;
+    gap: 50px;
+}
+
+.descricao_cesta{
+    flex-direction: column;
+}
+
+.texto2__agricultores{
+    width: 16em;
+    
+}
+
+}
+
+/* telas de tablet */
+@media (min-width: 757px) and (max-width: 1193px){
+
+    .texto__banner{
+        font-size: 2.5em;
+        font-style: italic;
+        text-wrap: wrap;
+        width: 600px;
+    }
+    
+    .texto2{
+        font-size: 20px;
+        text-wrap: wrap;
+        width: 35rem;
+    }
+
+    .dados_container{
+        flex-direction: column;
+    }
+
+    .numeros{
+        height: 100%;
+    }
+
+    .produtos{
+        flex-direction: column;
+    }
+
+    .info__cestas{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .descricao_cesta{
+        flex-direction: column;
+    }
+
+    .texto2__agricultores{
+        width: 30em;
+        
+    }
+}
+
+
+
+
+
+
+
+
+

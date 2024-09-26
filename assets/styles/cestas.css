@@ -1,0 +1,36 @@
+:root{
+    --fonteprincipal: "Familjen Grotesk", sans-serif;
+    --fontesecundaria: "Anaheim", sans-serif;
+    --laranja: #E85C0D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-color: var(--laranja);
+    margin-bottom: 5em;
+    font-family: var(--fonteprincipal);
+}
+
+.logoscs{
+    width: 2.5em;
+}
+
+.botao__doacao{
+    background-color: #FCC4A5; 
+}
+
+.botao__doacao:hover{
+    background-color: #FCC4A5;
+    border: 1px solid black;
+    transition: 0.3s;
+}
+
+
+h2{
+    color: var(--laranja);
+    font-style: italic;
+}
