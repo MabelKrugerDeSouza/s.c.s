@@ -27,10 +27,11 @@
                 <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Contato</a>
+                <a class="nav-link text-white" href="contato.html">Contato</a>
               </li>
               <li class="nav-item">
-                <button class="btn botao__doacao text-black fw-bold rounded-0" >Quero doar</button>
+                <!-- Botão quero doar -->
+                <button class="btn botao__doacao text-black fw-bold rounded-0">Quero doar</button>
               </li>
             </ul>
       
@@ -45,16 +46,79 @@
 
       <!-- cestas -->
        <section class="cestas">
-        <h2 class="titulo_cestas px-5">CESTAS</h2>
+        
+        <h2 class="px-5 fw-bold">CESTAS:</h2>
 
-        <div>
-            <div class="card-1">
-                
+        <div class="cards-cestas d-flex align-items-center justify-content-center gap-5">
+           
+          <div class="d-flex flex-column mt-5 mb-5">
+              <div class="card-container img-card1 d-flex flex-column align-items-center justify-content-center position-relative">
+                <p class="tamanho-cesta text-white position-absolute bottom-0 fw-bold fs-4">CESTA P</p>
+              </div>
+              <p class="fs-4 mt-3 text-start textocestas">R$ 107,00</p>
+              <button class="btn botao-adicionar text-white fw-bold">ADICIONAR </button>
+          </div>
+
+          <div class="d-flex flex-column mt-5 mb-5">
+            <div class="card-container img-card2 d-flex flex-column align-items-center justify-content-center position-relative">
+              <p class="tamanho-cesta text-white position-absolute bottom-0 fw-bold fs-4">CESTA M</p>
             </div>
+            <p class="fs-4 mt-3 text-start textocestas">R$ 112,00</p>
+            <button class="btn botao-adicionar text-white fw-bold">ADICIONAR </button>
+          </div>
+
+        <div class="d-flex flex-column mt-5 mb-5">
+          <div class="card-container img-card3 d-flex flex-column align-items-center justify-content-center position-relative">
+            <p class="tamanho-cesta text-white position-absolute bottom-0 fw-bold fs-4">CESTA G</p>
+          </div>
+          <p class="fs-4 mt-3 text-start textocestas">R$ 125,00</p>
+          <button class="btn botao-adicionar text-white fw-bold">ADICIONAR </button>
+        </div> 
+
+      </div>
+
+      </section>
+
+      <section class="outros mt-5">
+
+        <h2 class="px-5 fw-bold">OUTROS:</h2>
+
+        <div class="cards-outros d-flex align-items-center justify-content-center gap-5">
+
+          <div class="d-flex flex-column mt-5 mb-5">
+            <div class="card-container img-card4 d-flex flex-column align-items-center justify-content-center position-relative">
+              <p class="tamanho-cesta text-white position-absolute bottom-0 fw-bold fs-4">ARROZ</p>
+            </div>
+            <p class="fs-4 mt-3 text-start textocestas">R$ 17,99</p>
+            <button class="btn botao-adicionar text-white fw-bold">ADICIONAR</button>
+          </div> 
+
+          <div class="d-flex flex-column mt-5 mb-5">
+            <div class="card-container img-card5 d-flex flex-column align-items-center justify-content-center position-relative">
+              <p class="tamanho-cesta text-white position-absolute bottom-0 fw-bold fs-4">FEIJÃO</p>
+            </div>
+            <p class="fs-4 mt-3 text-start textocestas">R$7,99</p>
+            <button class="btn botao-adicionar text-white fw-bold">ADICIONAR</button>
+          </div> 
+
+          <div class="d-flex flex-column mt-5 mb-5">
+            <div class="card-container img-card6 d-flex flex-column align-items-center justify-content-center position-relative">
+              <p class="tamanho-cesta text-white position-absolute bottom-0 fw-bold fs-4">MACARRÃO</p>
+            </div>
+            <p class="fs-4 mt-3 text-start textocestas">R$ 8,99</p>
+            <button class="btn botao-adicionar text-white fw-bold">ADICIONAR</button>
+          </div> 
+          
 
         </div>
 
-       </section>
+      </section>
+
+      <footer class="mt-5">
+        <p class="text-white text-center p-2 fw-bold">S.C.S | Solidariedade com sabor</p>
+       </footer>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

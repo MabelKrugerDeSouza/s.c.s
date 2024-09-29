@@ -1,3 +1,5 @@
+/* cestas | outros */
+
 :root{
     --fonteprincipal: "Familjen Grotesk", sans-serif;
     --fontesecundaria: "Anaheim", sans-serif;
@@ -34,3 +36,91 @@ h2{
     color: var(--laranja);
     font-style: italic;
 }
+
+.cards-cestas , .cards-outros{
+    font-family: var(--fonteprincipal);
+    flex-direction: row;
+}
+
+
+    
+.card-container{
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    height: 400px;
+    border-radius: 24px;
+}
+
+.botao-adicionar{
+    background-color: #E85C0DC7;
+    font-size: 24px;
+}
+
+.botao-adicionar:hover{
+    background-color: var(--laranja);
+}
+
+.img-card1{
+    background-image: url(../imgs/itens/CestaP.svg);
+}
+
+.img-card2{
+    background-image: url(../imgs/itens/CestaM.svg);
+}
+
+.img-card3{
+    background-image: url(../imgs/itens/CestaG.svg);
+}
+
+
+.img-card4{
+    background-image: url(../imgs/itens/arroz.svg);
+}
+
+.img-card5{
+    background-image:url(../imgs/itens/feijao.svg);
+}
+
+.img-card6{
+    background-image:url(../imgs/itens/macarrao.svg);
+}
+
+footer{
+    background-color: var(--laranja);
+    font-family: var(--fonteprincipal);
+    height: 3em;
+}
+
+@media (min-width: 390px) and (max-width: 757px){
+   
+
+    .cards-cestas{
+        flex-direction: column;
+    }
+
+    .card-container{
+        width: 350px;
+        height: 350px;
+    }
+
+    .cards-outros{
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 757px) and (max-width: 1193px){
+    .cards-cestas{
+        flex-direction: column;
+    }
+
+    .card-container{
+        width: 500px;
+        height: 500px;
+    }
+
+    .cards-outros{
+        flex-direction: column;
+    }
+}
+

@@ -1,4 +1,4 @@
-/* página inicial | cestas | campanhas | outros */
+/* página inicial */
 
 :root{
     --fonteprincipal: "Familjen Grotesk", sans-serif;
@@ -130,7 +130,7 @@
 footer{
     background-color: var(--laranja);
     font-family: var(--fonteprincipal);
-   height: 3em;
+    height: 3em;
 }
 
 
