@@ -62,28 +62,28 @@ h2{
 }
 
 .img-card1{
-    background-image: url(../imgs/itens/CestaP.svg);
+    background-image: url(../imgs/itens/smbasket.svg);
 }
 
 .img-card2{
-    background-image: url(../imgs/itens/CestaM.svg);
+    background-image: url(../imgs/itens/mbasket.svg);
 }
 
 .img-card3{
-    background-image: url(../imgs/itens/CestaG.svg);
+    background-image: url(../imgs/itens/lbasket.svg);
 }
 
 
 .img-card4{
-    background-image: url(../imgs/itens/arroz.svg);
+    background-image: url(../imgs/itens/rice.svg);
 }
 
 .img-card5{
-    background-image:url(../imgs/itens/feijao.svg);
+    background-image:url(../imgs/itens/beans.svg);
 }
 
 .img-card6{
-    background-image:url(../imgs/itens/macarrao.svg);
+    background-image:url(../imgs/itens/macaroon.svg);
 }
 
 footer{
