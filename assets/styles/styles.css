@@ -43,13 +43,11 @@
 .texto__banner{
     font-size: 60px;
     font-style: italic;
-    text-wrap: wrap;
     width: 75rem;
 }
 
 .texto2{
     font-size: 24px;
-    text-wrap: wrap;
     width: 65rem;
 }
 
@@ -122,7 +120,6 @@
 }
 
 .texto2__agricultores{
-    text-wrap: wrap;
     font-family: var(--fontesecundaria);
     width: 50em ;
 }
@@ -153,13 +150,11 @@ footer{
 .texto__banner{
     font-size: 30px;
     font-style: italic;
-    text-wrap: wrap;
     width: 400px;
 }
 
 .texto2{
     font-size: 20px;
-    text-wrap: wrap;
     width: 25rem;
 }
 
@@ -210,13 +205,11 @@ footer{
     .texto__banner{
         font-size: 2.5em;
         font-style: italic;
-        text-wrap: wrap;
         width: 600px;
     }
     
     .texto2{
         font-size: 20px;
-        text-wrap: wrap;
         width: 35rem;
     }
 

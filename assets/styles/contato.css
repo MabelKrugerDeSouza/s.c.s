@@ -40,7 +40,6 @@ h2{
 
 .paragrafo{
     font-family: var(--fonteprincipal);
-    text-wrap: wrap;
     width: 32em;
 }
 
