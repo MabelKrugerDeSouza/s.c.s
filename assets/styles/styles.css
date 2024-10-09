@@ -25,6 +25,7 @@
 .botao__doacao{
     background-color: #FCC4A5; 
     border-color: #FCC4A5; 
+    font-size: 16px;
 }
 
 
@@ -73,26 +74,37 @@
 }
 
 .conheca {
-    font-family: var(--fonteprincipal);
+    font-family: var(--fontesecundaria);
+}
+
+.cestas, .campanhas {
+    flex: 1; /* Faz com que os itens ocupem igualmente o espaço disponível */
+    min-width: 200px; /* Largura mínima */
+    text-align: center; /* Centraliza o texto */
 }
 
 .link__cestas{
-    width: 709px;
-    height: 325px;
     background-image: url(../imgs/itens/cestas_de_verduras.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: var(--fonteprincipal);
     text-decoration: none;
+    display: block; /* Faz o link ocupar todo o espaço */
+    width: 100%;
+    height: 325px;
+    position: relative 
 }
 
 .link__campanhas{
-    width: 709px;
-    height: 325px;
     background-image: url(../imgs/itens/campanhas.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: var(--fonteprincipal);
+    text-decoration: none;
+    display: block; /* Faz o link ocupar todo o espaço */
+    width: 100%;
+    height: 325px;
+    position: relative 
 }
 
 .link__cestas:hover , .link__campanhas:hover{
@@ -173,8 +185,10 @@ footer{
     flex-direction: column;
 }
 
-.produtos{
-    flex-direction: column;
+.produtos {
+    display: flex;
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    width: 100%; /* Garante que ocupe 100% da largura */
 }
 
 .link__cestas{
