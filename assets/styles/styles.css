@@ -24,11 +24,13 @@
 
 .botao__doacao{
     background-color: #FCC4A5; 
+    border-color: #FCC4A5; 
 }
 
+
 .botao__doacao:hover{
-    background-color: #FCC4A5;
-    border: 1px solid black;
+    background-color: #e4ac8e;
+    border: 1px solid #e4ac8e;
     transition: 0.3s;
 }
 
