@@ -1,0 +1,288 @@
+
+:root{
+    --fonteprincipal: "Familjen Grotesk", sans-serif;
+    --fontesecundaria: "Anaheim", sans-serif;
+    --laranja: #E85C0D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-y: scroll; /* Garante que a rolagem seja permitida */
+    scrollbar-width: thin; /* Para navegadores compatíveis, deixar a barra de rolagem mais fina */
+}
+
+.navbar{
+    background-color: var(--laranja);
+    margin-bottom: 5em;
+    font-family: var(--fonteprincipal);
+}
+
+.logoscs{
+    width: 2.5em;
+}
+
+.botao__doacao{
+    background-color: #FCC4A5; 
+}
+
+.botao__doacao:hover{
+    background-color: #FCC4A5;
+    border: 1px solid black;
+    transition: 0.3s;
+}
+
+
+h2{
+    font-style: italic;
+    color: var(--laranja);
+    font-family: var(--fonteprincipal);
+}
+
+.paragrafo{
+    font-family: var(--fonteprincipal);
+    width: 32em;
+}
+
+input , label {
+    font-family: var(--fonteprincipal);
+    font-size: 1.5em;
+}
+
+label {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+form div.single {
+    width: 80%;
+}
+
+form div.duo {
+    width: 48%;
+}
+
+input {
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    padding-left: 1em;
+}
+
+.wrap-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mb-3 {
+    margin-bottom: 25px !important;
+}
+
+.nav-custom{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.nav-custom-item {
+    width: 80%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    font-family: var(--fonteprincipal);
+    text-transform: uppercase;
+}
+
+.nav-custom-item a {
+    text-align: center;
+    color: inherit; 
+    text-decoration: none; 
+    display: inline-block;
+    height: 100%;
+}
+
+.nav-custom .active a {
+    border-bottom: #000 4px solid;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea{
+    width: 1250px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 1em 0 0 1em;
+    font-family: var(--fonteprincipal);
+}
+
+footer{
+    background-color: var(--laranja);
+    height: 3em;
+    font-family: var(--fonteprincipal);
+}
+
+.form-container {
+    max-width: 900px;
+    margin: 50px auto;
+    border: 3px solid #e0e0e0;
+    padding: 25px;
+    border-radius: 30px;
+}
+.form-container button {
+
+}
+
+.btn-orange {
+    background-color: #FF7F32;
+    color: white;
+    font-family: var(--fonteprincipal);
+    font-weight: 700;
+    font-style: italic;
+}
+
+.main-text {
+    margin:50px 0 80px 0;
+}
+
+.main-text h4 {
+    font-family: var(--fonteprincipal);
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.main-text p {
+    font-family: var(--fonteprincipal);
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.options button {
+    width: 40%;
+    height: 100px;
+}
+
+.wrap-btn {
+    text-align: center;
+
+    margin-top: 40px;
+}
+
+.wrap-btn button {
+    height:70px;
+    width: 40%;
+
+    text-transform: uppercase;
+}
+
+.sign-in .wrap-btn {
+    width: 70%;
+}
+
+form.sign-up {
+    align-items: normal;
+}
+
+form.sign-in div {
+    width: 70%;
+}
+
+@media (min-width: 390px) and (max-width: 757px){
+
+    h2 , p{
+        text-align: center;
+    }
+
+    .nameemail{
+        flex-direction: column;
+    }
+       
+    .paragrafo{
+        width: 20em;
+    }
+    
+    input {
+        width: 300px;
+        height: 50px;
+    }
+    
+    textarea{
+        width: 300px;
+        height: 150px;
+    }
+
+    .nav-custom-item {
+        font-size: 18px;
+    }
+    
+}
+
+@media (min-width: 300px) and (max-width: 756px) {
+    .nav-custom-item {
+        font-size: 24px;
+    }
+
+    .wrap-input {
+        flex-direction: column;
+    }
+
+    form .duo, form .single {
+        width: 100% !important;
+    }
+
+    .wrap-btn button {
+        width: 70%;
+    }
+
+    .options {
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .options button {
+        width: 70%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 757px) and (max-width: 1193px){
+    
+    .nameemail{
+        flex-direction: column;
+    }
+       
+    .paragrafo{
+        width: 41em;
+    }
+    
+    input {
+        width: 650px;
+        height: 50px;
+    }
+    
+    textarea{
+        width: 650px;
+        height: 350px;
+    }
+}
