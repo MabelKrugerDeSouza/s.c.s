@@ -19,8 +19,47 @@ h2{
     height: 186px;
     object-fit: cover;
     border-radius: 15px;
-    background-color: white; 
+    background-size: cover;
+    background-repeat: space;
 }
+
+/* cards da campanha enumerados */
+.c1{
+    background-image: url(../imgs/itens/campaigns/enchentesrs.jpg);
+}
+
+.c2{
+    background-image: url(../imgs/itens/campaigns/venezuelanos.webp);
+}
+
+.c3{
+    background-image: url(../imgs/itens/campaigns/valedojequi.jpeg);
+}
+
+.c4{
+    background-image: url(../imgs/itens/campaigns/marmitex.jpg);
+}
+
+.c5{
+    background-image: url(../imgs/itens/campaigns/doacao.jpeg);
+}
+
+.c6{
+    background-image: url(../imgs/itens/campaigns/doacaopr.jpeg);
+}
+
+.c7{
+    background-image: url(../imgs/itens/campaigns/marmitasnarua.webp);
+}
+
+.c8{
+    background-image: url(../imgs/itens/campaigns/kids.jpg);
+}
+
+.c9{
+    background-image: url(../imgs/itens/campaigns/food.webp);
+}
+
 .progress {
     height: 16px;
     border-radius: 20px;
