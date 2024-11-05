@@ -31,14 +31,14 @@
               </li>
               <li class="nav-item">
                 <!-- Botão quero doar -->
-                <button class="btn botao__doacao text-black fw-bold rounded-0">Quero doar</button>
+                <button class="btn botao__doacao text-black fw-bold rounded-0" onclick="window.location.href='cestas.html'">Quero doar</button>
               </li>
             </ul>
       
             <a class="navbar-brand mx-auto" href="index.html"> <img src="./assets/imgs/logos/logo cut.png" alt="logo da solidariedade com sabor" class="logoscs"> </a>
             <div class="d-flex gap-5">
-                <a class="nav-link icon__nav" href="#"> <img src="./assets/imgs/icons/user_icon.svg" alt="área do usúario"> </a>
-                <a class="nav-link icon__nav" href="#"> <img src="./assets/imgs/icons/icon_shop.svg" alt="área do usúario"> </a>
+                <a class="nav-link icon__nav" href="signin-signup.html"> <img src="./assets/imgs/icons/user_icon.svg" alt="área do usúario"> </a>
+                <a class="nav-link icon__nav" href="carrinho.html"> <img src="./assets/imgs/icons/icon_shop.svg" alt="área do usúario"> </a>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@
                 <p class="tamanho-cesta text-black position-absolute bottom-0 fw-bold fs-4">CESTA P</p>
               </div>
               <p class="fs-4 mt-3 text-start textocestas">R$ 107,00</p>
-              <button class="btn botao-adicionar text-white fw-bold">ADICIONAR </button>
+              <button class="btn botao-adicionar text-white fw-bold" data-price="107,00">ADICIONAR </button>
           </div>
 
           <div class="d-flex flex-column mt-5 mb-5">
@@ -64,7 +64,7 @@
               <p class="tamanho-cesta text-black position-absolute bottom-0 fw-bold fs-4">CESTA M</p>
             </div>
             <p class="fs-4 mt-3 text-start textocestas">R$ 112,00</p>
-            <button class="btn botao-adicionar text-white fw-bold">ADICIONAR </button>
+            <button class="btn botao-adicionar text-white fw-bold"  data-price="112,00">ADICIONAR </button>
           </div>
 
         <div class="d-flex flex-column mt-5 mb-5">
@@ -72,7 +72,7 @@
             <p class="tamanho-cesta text-black position-absolute bottom-0 fw-bold fs-4">CESTA G</p>
           </div>
           <p class="fs-4 mt-3 text-start textocestas">R$ 125,00</p>
-          <button class="btn botao-adicionar text-white fw-bold">ADICIONAR </button>
+          <button class="btn botao-adicionar text-white fw-bold"  data-price="125,00">ADICIONAR </button>
         </div> 
 
       </div>
@@ -90,7 +90,7 @@
               <p class="tamanho-cesta text-black position-absolute bottom-0 fw-bold fs-4">ARROZ</p>
             </div>
             <p class="fs-4 mt-3 text-start textocestas">R$ 17,99</p>
-            <button class="btn botao-adicionar text-white fw-bold">ADICIONAR</button>
+            <button class="btn botao-adicionar text-white fw-bold"  data-price="17,90">ADICIONAR</button>
           </div> 
 
           <div class="d-flex flex-column mt-5 mb-5">
@@ -98,7 +98,7 @@
               <p class="tamanho-cesta text-black position-absolute bottom-0 fw-bold fs-4">FEIJÃO</p>
             </div>
             <p class="fs-4 mt-3 text-start textocestas">R$7,99</p>
-            <button class="btn botao-adicionar text-white fw-bold">ADICIONAR</button>
+            <button class="btn botao-adicionar text-white fw-bold"  data-price="7,99">ADICIONAR</button>
           </div> 
 
           <div class="d-flex flex-column mt-5 mb-5">
@@ -106,7 +106,7 @@
               <p class="tamanho-cesta text-black position-absolute bottom-0 fw-bold fs-4">MACARRÃO</p>
             </div>
             <p class="fs-4 mt-3 text-start textocestas">R$ 8,99</p>
-            <button class="btn botao-adicionar text-white fw-bold">ADICIONAR</button>
+            <button class="btn botao-adicionar text-white fw-bold"  data-price="8,99">ADICIONAR</button>
           </div> 
           
 
@@ -118,7 +118,7 @@
         <p class="text-white text-center p-2 fw-bold">S.C.S | Solidariedade com sabor</p>
        </footer>
 
-
+<script src="./assets/js/carrinho.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

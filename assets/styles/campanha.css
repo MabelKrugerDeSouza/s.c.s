@@ -1,3 +1,4 @@
+
 h2{
     color: var(--laranja);
     font-style: italic;
@@ -80,10 +81,173 @@ h2{
    color: rgba(255, 255, 255, 0.644);
 }
 
-.card-title{
+.card-title {
     font-family: var(--fonteprincipal);
 }
 
 .me-2 {
     font-family: var(--fonteprincipal);
+}
+
+
+.infoCampanhas, .arrecadacoes{
+    background-color: rgba(217, 217, 217, 60%);
+    ;
+    border-radius: 15px;
+}
+
+.modal-content{
+    width: 100em;
+}
+
+.infoCampanhas{
+    width: 30em;
+    height: 32em;
+}
+
+.arrecadacoes{
+    height: 32em;
+    width: 15em;
+}
+
+.imgModal1{
+    width: 28em;
+    border-radius: 15px;
+}
+
+.ong{
+    background-color: #d9d9d9;
+    height: 5em;
+    margin-top: 2em;
+    border-radius: 15px;
+}
+
+.fotoOng{
+    width: 3em;
+    border-radius: 24px;
+}
+
+.botaoFechar{
+    margin: 1em 0 0 12.5em;
+}
+
+.barra__progresso {
+    width: 12em;
+    height: 5px; 
+    background-color: #bbbb; 
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.texto-modal{
+    font-family: var(--fonteprincipal);
+}
+
+.content-campanhas{
+    margin-right: 2em;
+}
+
+.progressoDaBarra{
+    height: 100%;
+    background-color: #007bff; 
+}
+
+
+/* barra de progresso das campanhas */
+.pc1{
+    width: 70%;
+}
+
+.pc2, .pc8{
+    width: 50%;
+}
+
+.pc3{
+    width: 90%;
+}
+
+.pc4{
+    width: 60%;
+}
+
+.pc5{
+    width: 80%;
+}
+
+.pc6{
+    width: 40%;
+}
+
+.pc7{
+    width: 5%;
+}
+
+.pc9{
+    width: 20%;
+}
+
+.valorArrecadado{
+    color: var(--laranja);
+    margin-top: -0.5em;
+}
+
+.doadores{
+    margin-right: 8em;
+    color: rgba(0, 0, 0, 0.5);
+
+}
+
+.nmrDoadores{
+    margin-top: -0.8em;
+}
+
+.meta{
+    margin-right: 6.5em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+.botao__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.valorDoacao {
+    padding: 0.8em;
+    background-color: #d9d9d9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.valorDoacao.selected {
+    background-color: rgba(232, 92, 13, 0.78);
+    color: #fff;
+}
+
+#outroValor{
+    background-color: #d9d9d9;
+    width: 8.5em;
+    border: 1.5px solid #686767bb;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#outroValor::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.botaoDoacao{
+    background-color: var(--laranja);
+    border: none;
+    color: #fff;
+    width: 17em;
+    padding: 0.5em;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 13px;
 }
