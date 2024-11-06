@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const signin = document.querySelector('#signin');
     const signup = document.querySelector('#signup');
 
+    // default render
+    renderSignIn();
+
     signin.addEventListener('click', () => {
         toggleActive(signin, signup);
         renderSignIn();
@@ -47,6 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
         submitButton.type = 'submit';
         submitButton.className = 'btn btn-orange btn-lg';
         submitButton.textContent = 'ENTRAR';
+        submitButton.addEventListener('click', (e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            if(form.checkValidity())
+                if (authenticateUser({ email: emailDiv.querySelector('input').value, password: passwordDiv.querySelector('input').value }))
+                {
+                    alert('Usuário autenticado - REDIRECIONAR PARA PLATAFORMA');
+                }
+                else {
+                    showModalWithTimeout('Usuário não encontrado', 3000);
+                }
+        })
 
         wrapBtnDiv.appendChild(submitButton);
 
@@ -114,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const form = document.createElement('form');
         form.className = 'sign-up';
+
         
         const nameDiv = type == 'Individual'? createSingleInputField('name', 'Nome', 'text') : createSingleInputField('name', 'Razão Social', 'text')
         const cpfDiv = type == 'Individual'? createSingleInputField('cpf', 'CPF', 'number') : createSingleInputField('cpf', 'CNPJ', 'number')
@@ -130,6 +146,45 @@ document.addEventListener('DOMContentLoaded', () => {
         submitButton.type = 'submit';
         submitButton.className = 'btn btn-orange btn-lg';
         submitButton.textContent = 'Cadastrar';
+        submitButton.addEventListener('click', (e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            debugger
+            if(form.checkValidity()) {
+                switch(type) {
+            
+                    case 'Individual':
+                        createUser({ 
+                            type,
+                            data: { 
+                                email: emailWrap.querySelector('#email').value, 
+                                password: passwordWrap.querySelector('#password').value, 
+                                name: nameDiv.querySelector('#name').value, 
+                                cpf: cpfDiv.querySelector('#cpf').value, 
+                                birthDate: birthDateDiv.querySelector('#birth-date').value, 
+                                phone: phoneDiv.querySelector('#phone').value 
+                            }
+                        });
+                        break;
+                    case 'Enterprise':
+                        createUser({ 
+                            type,
+                            data: { 
+                                email: emailWrap.querySelector('#email').value, 
+                                password: passwordWrap.querySelector('#password').value, 
+                                name: nameDiv.querySelector('#name').value, 
+                                cnpj: cpfDiv.querySelector('#cpf').value, 
+                                phone: phoneDiv.querySelector('#phone').value 
+                            }
+                        });
+                        break;
+                }
+
+                showModalWithTimeout('Usuário cadastrado com sucesso!', 3000);
+                renderSignIn();
+                toggleActive(signin, signup);
+            }
+        });
 
         wrapBtnDiv.appendChild(submitButton);
 
@@ -160,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
         input.type = inputType;
         input.className = 'form-control';
         input.id = id;
+        input.required = true;
 
         div.appendChild(label);
         div.appendChild(input);
@@ -183,4 +239,50 @@ document.addEventListener('DOMContentLoaded', () => {
         wrapDiv.appendChild(div2);
         return wrapDiv;
     }
+
 });
+
+// Function to create and display the modal
+function showModalWithTimeout(message, timeout) {
+    // Create modal HTML structure using template literals
+    const modalHTML = `
+        <div class="modal fade" id="dynamicModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ${message}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Append modal to the body
+    document.querySelector('body').insertAdjacentHTML('beforeend', modalHTML);
+
+    // Initialize the modal using Bootstrap's modal API
+    const modalElement = document.getElementById('dynamicModal');
+    const bootstrapModal = new bootstrap.Modal(modalElement);
+
+    // Show the modal
+    bootstrapModal.show();
+
+    // Hide the modal after the specified timeout
+    setTimeout(() => {
+        bootstrapModal.hide();
+
+        // Remove the modal from the DOM after it’s hidden
+        modalElement.addEventListener('hidden.bs.modal', () => {
+            modalElement.remove();
+        });
+    }, timeout);
+}
+
+showModalWithTimeout('This is a dynamically created modal.', 3000);
