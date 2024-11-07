@@ -1,0 +1,97 @@
+:root{
+    --fonteprincipal: "Familjen Grotesk", sans-serif;
+    --fontesecundaria: "Anaheim", sans-serif;
+    --laranja: #E85C0D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fonteprincipal);
+}
+
+section {
+    flex: 1;
+}
+
+.content{
+    flex: 1;
+}
+
+.navbar{
+    background-color: var(--laranja);
+    margin-bottom: 5em;
+}
+
+.logoscs{
+    width: 2.5em;
+}
+
+.botao__doacao{
+    background-color: #FCC4A5; 
+    border-color: #FCC4A5; 
+}
+
+
+.botao__doacao:hover{
+    background-color: #e4ac8e;
+    border: 1px solid #e4ac8e;
+    transition: 0.3s;
+}
+
+.titulo{
+    font-style: italic;
+    color: var(--laranja);
+}
+
+.carrinho-item{
+     font-size: 24px;
+     margin-left: 2em;
+     font-weight: 700;
+     margin-top: 1em;
+}
+
+.total{
+    font-size: 3em;
+    margin-left: 0.8em;
+    font-weight: 900;
+    color: var(--laranja);
+    margin-top: 5em;
+}
+
+.botao__finalizar{
+color: #fff;
+background-color:rgba(232, 92, 13, 0.78);
+font-family: var(--fonteprincipal);
+width: 15em;
+height: 2.5em;
+}
+
+.botao__finalizar:hover , .botao__finalizar:active{
+    background-color: var(--laranja);
+    color: #fff;
+}
+
+
+.botao__limpar {
+    border: 1px solid;
+}
+
+.botao__limpar:hover{
+    padding: 0.5em;
+    transition: 0.3s;
+    border: 1px solid;
+}
+
+footer{
+    background-color: var(--laranja);
+    font-family: var(--fonteprincipal);
+    margin-top: auto;
+}
