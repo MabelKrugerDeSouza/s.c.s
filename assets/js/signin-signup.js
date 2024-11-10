@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if(form.checkValidity())
                 if (authenticateUser({ email: emailDiv.querySelector('input').value, password: passwordDiv.querySelector('input').value }))
                 {
-                    alert('Usuário autenticado - REDIRECIONAR PARA PLATAFORMA');
+                    window.location="carrinho.html";
                 }
                 else {
                     showModalWithTimeout('Usuário não encontrado', 3000);
