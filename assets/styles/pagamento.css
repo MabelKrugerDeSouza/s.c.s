@@ -1,0 +1,95 @@
+h2{
+    color: #E85C0D;
+    font-style: italic;
+    font-family: var(--fonteprincipal);
+    font-size: 60px;
+}
+
+h4 {
+    color: #000;
+    font-family: var(--fonteprincipal);
+    font-size: 30px;
+}
+
+h5{
+    font-style: italic;
+    font-family: var(--fonteprincipal);
+    padding-bottom: 5px;
+}
+
+.payment-method-container {
+    margin-top: 70px;
+}
+
+.config-radium-button {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid black;
+    font-family: var(--fonteprincipal);
+    font-style: italic;
+}
+
+#descricao-pix {
+    font-style: italic;
+    font-family: var(--fonteprincipal);
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.configuracao-titulo {
+    padding-top: 30px ;
+    padding-bottom: 10px;
+    font-style: italic;
+    font-family: var(--fonteprincipal);
+    color: #E85C0D;
+}
+
+.form-control {
+    height: 60px;
+}
+
+.form-label {
+    padding-top: 20px;
+    font-style: italic;
+    font-family: var(--fonteprincipal);
+}
+
+.botao__finalizar {
+    width: 250px;
+    height: 60px;
+    background-color: #E85C0D; 
+    border-color: #E85C0D;
+    border-radius: 10px;
+    color: #fff;
+    font-family: var(--fonteprincipal);
+    font-style: italic;
+}
+.botao__finalizar:hover{
+    background-color: #e4ac8e;
+    border: 1px solid #e4ac8e;
+    transition: 0.3s;
+}
+
+.payment-content {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    padding: 30px;
+    width: 100%; 
+    min-height: 200px;
+}
+
+.configuracao-boleto {
+    font-family: var(--fonteprincipal);
+    font-style: italic;
+}
+
+.configuracao-boleto-info {
+    font-family: var(--fonteprincipal);
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/imgs/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/imgs/favicon/favicon-16x16.png">
+    <title>Pagamento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="stylesheet" href="./assets/styles/pagamento.css">
+    <style>
+        .payment-method-info {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-5" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary botao__doacao text-black fw-semibold rounded-2"
+                            onclick="window.location.href='cestas.html'">Quero doar</button>
+                    </li>
+                </ul>
+                <a class="navbar-brand mx-auto" href="index.html"> <img src="./assets/imgs/logos/logo cut.png"
+                        alt="logo da solidariedade com sabor" class="logoscs"> </a>
+                <div class="d-flex gap-5">
+                    <a class="nav-link icon__nav" href="signin-signup.html"> <img
+                            src="./assets/imgs/icons/user_icon.svg" alt="área do usuário"> </a>
+                    <a class="nav-link icon__nav" href="carrinho.html"> <img src="./assets/imgs/icons/icon_shop.svg"
+                            alt="carrinho"> </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 ms-4">
+        <h2 class="mb-4">INFORMAÇÕES</h2>
+        <div class="col-12 col-md-8">
+            <form id="payment-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">NOME:</label>
+                    <input type="text" class="form-control" id="name" value="Fulano de tal" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">EMAIL:</label>
+                    <input type="email" class="form-control" id="email" value="fulano@gmail.com" readonly>
+                </div>
+
+                <div class="payment-method-container">
+                    <h5 class="mt-4">MÉTODO DE PAGAMENTO</h5>
+                    <div class="d-flex gap-3 mb-4">
+                        <div class="config-radium-button">
+                            <input class="form-check-input" type="radio" name="payment-method" id="pix">
+                            <label class="form-check-label" for="pix">
+                                Pix
+                            </label>
+                        </div>
+
+                        <div class="config-radium-button">
+                            <input class="form-check-input" type="radio" name="payment-method" id="cartao">
+                            <label class="form-check-label" for="cartao">
+                                Cartão
+                            </label>
+                        </div>
+
+                        <div class="config-radium-button">
+                            <input class="form-check-input" type="radio" name="payment-method" id="boleto">
+                            <label class="form-check-label" for="boleto">
+                                Boleto
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pix-info" class="payment-method-info">
+                    <div class="payment-content">
+                        <h4 id="descricao-pix"><strong>USE O QR CODE PARA PAGAR O PIX</strong></h4>
+                         <p id="descricao-pix"><strong>VALOR DA COMPRA:</strong> R$ <span id="valor-compra">0.00</span></p>
+                        <img src="./assets/imgs/itens/pagamento/qrCode.png" alt="QR Code" class="img-fluid"
+                            style="max-width: 200px;">
+                    </div>
+                </div>
+                <div id="cartao-info" class="payment-method-info">
+                    <h4 class="configuracao-titulo">DADOS DO CARTÃO</h4>
+                    <div class="mb-3">
+                        <label for="numero-cartao" class="form-label">Número do Cartão:</label>
+                        <input type="text" class="form-control" id="numero-cartao" required oninput="applyCardMask(event)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nome-cartao" class="form-label">Nome no Cartão:</label>
+                        <input type="text" class="form-control" id="nome-cartao" required>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex gap-3">
+
+                            <!-- Validade no Cartão -->
+                            <div class="flex-fill">
+                                <label class="form-label" for="mes-validade">Validade no Cartão:</label>
+                                <div class="d-flex gap-2">
+                                    <input type="text" class="form-control" id="mes-validade" maxlength="2" required style="width: 80px;" oninput=" acceptJustNumber(event)" >
+                                    <input type="text" class="form-control" id="ano-validade" maxlength="2" required style="width: 80px;" oninput=" acceptJustNumber(event)">
+                                </div>
+                            </div>
+                    
+                            <!-- CVV -->
+                            <div class="flex-fill">
+                                <label class="form-label" for="cvv">CVV:</label>
+                                <input type="text" class="form-control" id="cvv" maxlength="3" required style="width: 80px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button id="botao_finalizar" class="btn botao__finalizar text-white fw-semibold rounded-2">FINALIZAR</button>
+                    </div>
+                </div>
+                <div id="boleto-info" class="payment-method-info">
+                    <h4 class="configuracao-titulo">BOLETO</h4>
+                    <p class="configuracao-boleto"><strong>VENCIMENTO:</strong></p>
+                    <p class="configuracao-boleto-info">Amanhã, 11 de outubro</p>
+                    <p class="configuracao-boleto"><strong>VALOR DA COMPRA:</strong></p>
+                    <p class="configuracao-boleto-info">R$ <span id="boleto-valor-compra">0.00</span></p>
+                    <p class="configuracao-boleto"><strong>CÓDIGO BOLETO: 75590.00331 89850.760938 36177.569849 9 1111111111111</strong></p>
+                    <img src="./assets/imgs/itens/pagamento/boleto.png" alt="Boleto gerado" class="img-fluid"
+                        style="max-width: auto;">
+                    <div class="mt-4">
+                        <button id="botao_finalizar_boleto" class="btn  botao__finalizar text-white fw-semibold rounded-2">FINALIZAR</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="mt-5">
+        <p class="text-white text-center p-2 fw-bold">S.C.S | Solidariedade com sabor</p>
+    </footer>
+
+    <script src="./assets/js/pagamento.js"></script>
+    <script src="./assets/js/carrinho.js"></script>
+</body>
+</html>
